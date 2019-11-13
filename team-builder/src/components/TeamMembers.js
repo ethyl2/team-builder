@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Row, Col, Card, CardHeader, CardBody,
+import { Card, CardHeader, CardBody, Button,
     CardTitle, CardText } from 'reactstrap';
 
 const TeamMembers = props => {
@@ -11,9 +11,10 @@ const TeamMembers = props => {
                     <CardHeader>{member.name}</CardHeader>
                     <CardBody>
                         <CardTitle>{member.role}</CardTitle>
-                        <CardText><address>
-                            <a href={`mailto:${member.email}`}>{member.email}</a></address>
+                        <CardText>
+                            <a href={`mailto:${member.email}`}>{member.email}</a>
                         </CardText>
+                        <Button onClick={() => props.addMemberToEdit(member)}>Edit</Button>
                     </CardBody>
                 </Card>
                         

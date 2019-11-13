@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Button, Form, FormGroup, Label, Input } from 'reactstrap';
 
 const TeamMemberForm = props => {
@@ -10,9 +10,18 @@ const TeamMemberForm = props => {
 
     const submitForm = event => {
         event.preventDefault();
+        if (props.memberToEdit) {
+            props.editMember(person);
+        } else {
         props.addNewMember(person);
+        }
         setPerson({name: '', email: '', role: ''});
     }
+
+    useEffect(() => {
+        console.log(props.memberToEdit);
+        setPerson(props.memberToEdit);
+    }, [props.memberToEdit]);
 
     return (
         <Form className='form' onSubmit={submitForm}>
@@ -54,7 +63,8 @@ const TeamMemberForm = props => {
                 </Input>
             </FormGroup>
             
-            <Button type='submit'>Add Team Member</Button>
+            <Button type='submit'>{
+                props.memberToEdit !== ''? 'Edit Member': 'Add Team Member'}</Button>
         </Form>
     )
 }
