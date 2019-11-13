@@ -2,7 +2,9 @@ import React, { useState } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import TeamMembers from './components/TeamMembers';
-import Form from './components/Form';
+import TeamMemberForm from './components/Form';
+
+import { Jumbotron } from 'reactstrap';
 
 function App() {
   const [ teamList, setTeamList ] = useState([
@@ -26,9 +28,12 @@ function App() {
 
   return (
     <div className="App">
-     <h1>My Team</h1>
-     <Form addNewMember={addNewMember} />
-     <TeamMembers teamMembers={teamList} />
+      <Jumbotron>
+        <h1>My Development Team</h1>
+      </Jumbotron>
+     
+      <TeamMemberForm addNewMember={addNewMember} />
+      <TeamMembers teamMembers={teamList} />
     </div>
   );
 }
