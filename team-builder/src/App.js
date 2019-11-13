@@ -11,24 +11,28 @@ function App() {
       id: '1',
       name: 'Heather',
       email: 'zzzuzz@gmail.com',
-      role: 'Front-End Engineer'
+      role: 'Front-End Engineer',
+      color: '#54D3DA'
     }, 
     { id: '2',
       name: 'Paul',
       email: 'paulhnuffer@gmail.com',
-      role: 'Designer'
+      role: 'Designer',
+      color: '#C0A05E'
     },
     {
       id: '3',
       name: 'Rose',
       email: 'rosenuffer@gmail.com',
-      role: 'Data Scientist'
+      role: 'Data Scientist', 
+      color: '#E84DD2'
     },
     {
       id: '4',
       name: 'Thomas',
       email: 'tom@tomdabomb.com',
-      role: 'Other Position'
+      role: 'Other Position',
+      color: '#32A6D7'
     }
   ]);
 

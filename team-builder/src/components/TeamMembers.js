@@ -2,12 +2,12 @@ import React from 'react';
 import { Card, CardHeader, CardBody, Button,
     CardTitle, CardText } from 'reactstrap';
 
-const TeamMembers = props => {
+const TeamMembers = props => {     
     return (
         <div className='team-list'>
-            {props.teamMembers.map(member => (
-                    
-                <Card className="member" key={member.id}>
+            {props.teamMembers.map(member => {
+                return (    
+                <Card className="member" key={member.id} >
                     <CardHeader>{member.name}</CardHeader>
                     <CardBody>
                         <CardTitle>{member.role}</CardTitle>
@@ -17,8 +17,8 @@ const TeamMembers = props => {
                         <Button onClick={() => props.addMemberToEdit(member)}>Edit</Button>
                     </CardBody>
                 </Card>
-                        
-            ))}
+                )           
+            })}
         </div>
     )
 }
