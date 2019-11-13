@@ -7,7 +7,7 @@ const TeamMembers = props => {
         <div className='team-list'>
             {props.teamMembers.map(member => {
                 return (    
-                <Card className="member" key={member.id} >
+                <Card className="member" key={member.id} style={{border: `3px solid ${member.color}`}}>
                     <CardHeader>{member.name}</CardHeader>
                     <CardBody>
                         <CardTitle>{member.role}</CardTitle>
