@@ -15,7 +15,7 @@ const TeamMemberForm = props => {
     }
 
     return (
-        <Form onSubmit={submitForm}>
+        <Form className='form' onSubmit={submitForm}>
 
             <FormGroup>
                 <Label htmlFor='inputName'>Name </Label>
@@ -47,6 +47,7 @@ const TeamMemberForm = props => {
                     <option value='UI/UX Engineer'>UI Engineer</option>
                     <option value='Front-End Engineer'>Front-End Engineer</option>
                     <option value='Back-End Engineer'>Back-End Engineer</option>
+                    <option value='Mobile Developer'>Mobile Developer</option>
                     <option value='Data Scientist'>Data Scientist</option>
                     <option value='Project Manager'>Project Manager</option>
                     <option value='Other Position'>Other Position</option>

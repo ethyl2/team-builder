@@ -12,7 +12,24 @@ function App() {
       id: 1,
       name: 'Heather',
       email: 'zzzuzz@gmail.com',
-      role: 'frontend engineer'
+      role: 'Front-End Engineer'
+    }, 
+    { id: 2,
+      name: 'Paul',
+      email: 'paulhnuffer@gmail.com',
+      role: 'Designer'
+    },
+    {
+      id: 3,
+      name: 'Rose',
+      email: 'rosenuffer@gmail.com',
+      role: 'Data Scientist'
+    },
+    {
+      id: 4,
+      name: 'Thomas',
+      email: 'tom@tomdabomb.com',
+      role: 'Other Position'
     }
   ]);
 
@@ -28,7 +45,7 @@ function App() {
 
   return (
     <div className="App">
-      <Jumbotron>
+      <Jumbotron className="heading">
         <h1>My Development Team</h1>
       </Jumbotron>
      
