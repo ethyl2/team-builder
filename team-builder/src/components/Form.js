@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Button, Form, FormGroup, Label, Input } from 'reactstrap';
 
 const TeamMemberForm = props => {
-    const [person, setPerson] = useState({name: '', email: '', role: ''});
+    const [person, setPerson] = useState({name: '', email: '', role: '', color: '#00436C'});
 
     const handleChanges = event => {
         setPerson( { ...person, [event.target.name]: event.target.value});
@@ -15,7 +15,7 @@ const TeamMemberForm = props => {
         } else {
         props.addNewMember(person);
         }
-        setPerson({name: '', email: '', role: ''});
+        setPerson({name: '', email: '', role: '', color: '#00436C'});
     }
 
     useEffect(() => {
@@ -62,6 +62,17 @@ const TeamMemberForm = props => {
                     <option value='Other Position'>Other Position</option>
                 </Input>
             </FormGroup>
+
+            <FormGroup>
+                <Label htmlFor="inputColor">Color</Label>
+                <Input
+                    type="color"
+                    name="color"
+                    id="inputColor"
+                    value={person.color}
+                    onChange={handleChanges}
+                />
+                </FormGroup>
             
             <Button type='submit'>{
                 props.memberToEdit !== ''? 'Edit Member': 'Add Team Member'}</Button>

@@ -41,7 +41,8 @@ function App() {
       id: Date.now(),
       name: member.name,
       email: member.email,
-      role: member.role
+      role: member.role,
+      color: member.color
     };
     setTeamList([ ...teamList, newMember]);
   }
