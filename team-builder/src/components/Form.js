@@ -10,6 +10,7 @@ const Form = props => {
     const submitForm = event => {
         event.preventDefault();
         props.addNewMember(person);
+        setPerson({name: '', email: '', role: ''});
     }
 
     return (
@@ -29,12 +30,19 @@ const Form = props => {
                 value={person.email}
             />
             <label htmlFor='inputRole'>Role </label>
-            <input id='inputRole'
-                type='text'
-                name='role'
-                onChange={handleChanges}
-                value={person.role}
-            />
+            <select id='inputRole' 
+                onChange={handleChanges} 
+                name='role' 
+                value={person.role}>
+                <option value='Designer'>Designer</option>
+                <option value='UI/UX Engineer'>UI Engineer</option>
+                <option value='Front-End Engineer'>Front-End Engineer</option>
+                <option value='Back-End Engineer'>Back-End Engineer</option>
+                <option value='Data Scientist'>Data Scientist</option>
+                <option value='Project Manager'>Project Manager</option>
+                <option value='Other Position'>Other Position</option>
+            </select>
+            
             <button type='submit'>Add Team Member</button>
         </form>
     )
