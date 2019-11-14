@@ -1,0 +1,35 @@
+.App {
+  text-align: center;
+}
+
+.heading {
+  background: #69B9DF; 
+}
+
+.form {
+  background: #00776A;
+  width: 50vw;
+  padding: 2rem;
+  margin: 2rem auto;
+}
+
+.team-list {
+  display: flex;
+  flex-flow: row wrap; 
+  justify-content: space-between;
+  align-items: center;
+  width: 80vw;
+  background: #9D0098;
+  margin: 4rem auto;
+  padding: 1rem;
+}
+
+.member {
+  width: 35vw;
+  margin: 1rem;
+  border: 3px solid black; 
+}
+
+input:hover {
+  background: #D8C48A;
+}
